@@ -28,26 +28,47 @@
     padding: 30px 10%;
   }
 
-  /*Opçôes Logo */  
+    /*Opçôes Menu header */  
   .logo, .navlinks, li {
     display:inline-flex;
     padding: 0px 20px;
     cursor: pointer;
   }
+
+  .logo {
+    position: relative;
+    margin-top: -30px;
+  }
+
+  .slogan {
+    position: relative;
+    font-size: 12px;
+    margin: -20px -45px;
+    color: #99FFFF;
+    
+  }
+
+    /*Opções logo*/
+  header .logo {
+    border-radius: 50px;
+    padding: 9px 25px;
+    height: 100px;  
+    width: 200px;
+  }
   
-  /*Opções-tag nav*/
-  .nav_links, li, a {
+    /*Opções-tag nav*/
+  p, .nav_links, li, a {
     transition: all 0.2s ease 0s;
     border-radius: 10px;
   }
   
   .nav_links li a:hover {
     padding: 15px 25px;
-    background-color:rgba(0, 136, 169, 1);
+    background-color:rgba(0, 136, 169, 0.8);
     border-radius: 50px;
   }
 
-  /* Opções do botão Entre */
+    /* Opções do botão Entre */
   button {
     padding: 9px 25px;
     background-color: rgba(0, 136, 169, 1);
@@ -56,10 +77,11 @@
   }
 
   button:hover {
-    background-color:rgba(0, 136, 169, 0.8)
+    background-color:rgba(0, 136, 169, 0.8);
   }
 
-  /* MAIN PAGE */
+
+  /* Tag Main */
   main section img {
     display: flex;
     flex-direction: row;
@@ -67,10 +89,46 @@
     height: 200px;
     width: 400px;
     border-radius: 50px;
-
   }
 
 
+main div{
+    flex-direction: row;
+    background-color: white;
+}
+
+div {
+  background-color: red;
+}
+
+/*Media query - responsividade*/
+
+@media screen and (max-width: 1200px) {
+  header .nav_links a {
+    font-size: 9px;
+  }
+
+  header a .botao {
+    padding: 3px 10px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  header .nav_links a {
+    font-size: 10px;
+  }
   
+}
+@media screen and (max-width: 768px) {
+  header ul {
+    display: none;
+  }
+}
 
+@media screen and (max-width: 600px) {
+  body{
 
+  }
+}
+
+  /*Icone do menu*/
