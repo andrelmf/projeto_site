@@ -1,31 +1,53 @@
- @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@charset 'UTF-8';
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+
+ :root {
+  --cor1: #edf0f1;
+  --cor2: #99FFFF;
+  --cor3: #0088A9;
+  --cor4: #3066BE;
+  --cor5: #24252A; 
+  --cor6: #24252ac0;
+
+  --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+  --fonte-destaque: 'poppins', cursive;
+}
+
 * {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    background-color: #24252A;
-    font-family: "poppins", sans-serif;
   }
+
+/* Tag Body */
+
+  body {
+    background-color: var(--cor6);
+    font-family: var(--fonte-padrao);
+  }
+
 /* Tag Header */
 
   header li, a, button, .logo {
-    font-family: "poppins", sans-serif;
+    font-family: var(--fonte-destaque);
     font-weight: 500px;
     font-size: 20px;
-    color: #edf0f1;
+    color: var(--cor1);
     text-decoration: none;
+    font-weight: normal;
   }
 
   header {
     display:flex;
     justify-content:space-between;
     align-items: center;
-    flex-grow:; /*Por padrão, todo item( bloco/div) tem flex grow = 0. Se todos recebem flex-grow, o espaço extra do conteiner vai ser distribuido igualmente entre todos os items(bloco/div), portanto se for atribuido flex-grow 2, este container vai ser maior que os outros de valor flex-grow 1*/
-    flex-shrink:; /*É a msm coisa do flex-grow so que ao inves de aumentar, diminui o bloco/div.*/ 
-    flex-basis:; /*Distribui os items de forma igual p/ que não sobre espaço dentro do container.*/
+    background-color: var(--cor5);
     order: 5;
-    padding: 30px 10%;
+    padding: 47px 10%;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.199);
   }
 
     /*Opçôes Menu header */  
@@ -44,16 +66,16 @@
     position: relative;
     font-size: 12px;
     margin: -20px -45px;
-    color: #99FFFF;
+    color: var(--cor1);
     
   }
 
     /*Opções logo*/
   header .logo {
-    border-radius: 50px;
-    padding: 9px 25px;
-    height: 100px;  
-    width: 200px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    height: 125px;  
+    width: 180px;
   }
   
     /*Opções-tag nav*/
@@ -64,41 +86,200 @@
   
   .nav_links li a:hover {
     padding: 15px 25px;
-    background-color:rgba(0, 136, 169, 0.8);
+    background-color: var(--cor3);
     border-radius: 50px;
   }
 
     /* Opções do botão Entre */
   button {
     padding: 9px 25px;
-    background-color: rgba(0, 136, 169, 1);
+    background-color: var(--cor3);
     border-radius: 50px;
     cursor: pointer;
   }
 
   button:hover {
-    background-color:rgba(0, 136, 169, 0.8);
+    background-color: var(--cor4);
   }
 
+/* Tag Main */
 
-  /* Tag Main */
-  main section img {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 200px;
-    width: 400px;
-    border-radius: 50px;
-  }
-
-
-main div{
-    flex-direction: row;
-    background-color: white;
+main {
+  min-width: 300px;
+  max-width: 1250px;
+  margin: auto;
+  margin-bottom: 30px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.445);
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
-div {
-  background-color: red;
+main img {
+  width: 100%;
+  max-height: 400px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.274);
+}
+
+/* Opções Imagem Principal */
+
+img.principal {
+  position: relative;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.274);
+}
+
+label.txt {
+  position: absolute;
+  color:var(--cor1);
+  font-family: var(--fonte-destaque);
+  text-shadow: 3px 3px 10px rgba(180, 180, 180, 0.685);
+  line-height: 4em;
+  font-size: 1.3em;
+  font-weight: bold;
+  left: 150px;
+  top: 230px;
+}
+
+label.img-logo {
+  position: absolute;
+  left: 1000px;
+  top: 510px;
+}
+
+img#logo-princ {
+  width: 150px;
+  height: 45px;
+  border-radius: 20px;
+}
+
+/*sections*/
+section {
+  border: 10px;
+  border-radius: 3px;
+  margin: 20px;
+  padding: 10px;
+  box-shadow:  0px 0px 10px rgba(0, 0, 0, 0.13);
+}
+
+section h2 {
+  font-family: var(--fonte-destaque);
+  font-weight: bolder;
+  color: black;
+  font-size: 2em;
+  padding: 20px;
+}
+
+section p {
+  text-align: justify;
+  line-height: 2em; 
+  font-size: 1em;  
+  display: inline-block;
+  font-family: var(--fonte-padrao);
+}
+
+/* Section Hora-Dia */
+section#hora-dia {
+  background-image: linear-gradient(to left, var(--cor2), var(--cor3), var(--cor4), transparent);
+  width: 150px;
+  height: 50px;
+  border: 5px;
+  border-radius: 0px;
+  padding: 0px;
+}
+
+div#msg {
+  position: absolute;
+  font-size: 2.3em;
+  font-family: Arial;
+  color: black;
+  margin-top: 14px;
+  margin-left: 25px;
+}
+
+img#imagem-hora {
+  width: 50px;
+  height: 45px;
+  float: right;
+  margin-top: 14px;
+  margin-right: 25px;
+}
+
+/* Section IMG */
+section img.pequena {
+  max-width: 450px;
+  display: inline-block;
+}
+
+/*Section Div Video */
+
+section#video {
+  margin:0px;
+}
+
+div.video {
+  background-color:var(--cor5);
+  margin: 0px -10px 30px -10px;
+  padding: 20px;
+  padding-bottom: 59%;
+  position: relative;
+}
+
+div.video > iframe {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+}
+
+/*Tag Aside Main Top 10*/
+
+div#robot{
+  display: inline-box;
+  float: right;
+  width: 150px;
+  height: 60px;
+  padding: 0px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  border-radius: 0px;
+}
+
+aside h2 {
+  text-align: center;
+  font-family: var(--fonte-destaque);
+  font-size: 2em;
+  font-weight: normal;
+  color: var(--cor1);
+  text-shadow: 0px 0px 10px rgba(255, 253, 253, 0.664);
+  background-image:linear-gradient(to right, transparent, var(--cor6), transparent);
+  padding: 10px;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+aside div {
+  display: inline-block;
+  width: 300px;
+  margin: 20px 20px;
+  padding: 5px;
+  font-family:var(--fonte-destaque);
+  font-weight: normal;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgba(128, 128, 128, 0.048);
+}
+
+aside div > h3 {
+  background-image: linear-gradient(to right, transparent, var(--cor1), transparent);
+  padding: 9px;
+  color:var(--cor5);
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.384);
+}
+
+div > ol > li{
+  display: block;
 }
 
 /*Media query - responsividade*/
@@ -117,8 +298,8 @@ div {
   header .nav_links a {
     font-size: 10px;
   }
-  
 }
+
 @media screen and (max-width: 768px) {
   header ul {
     display: none;
@@ -131,4 +312,66 @@ div {
   }
 }
 
-  /*Icone do menu*/
+  /*Footer*/
+
+footer > section {
+  background-color: var(--cor6);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.274);
+  color: white;
+  font-weight: normal;
+  text-decoration: none;
+  font-family:var(--fonte-destaque);
+  font-size: 0.8em;
+  padding: 45px;
+  margin: 0px;
+  display: block;
+}
+
+div.txt{
+  width: 250px;
+  padding: 15px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+div.txt > ul > li {
+  display: block;
+  padding: 5px;
+}
+
+div.txt > p {
+  padding: 10px;
+}
+
+section > div.img {
+  display: inline-block;
+}
+
+footer > h3 > p {
+  text-indent: justify;
+  color: var(--cor3);
+  font-weight: normal;
+}
+
+footer > aside > p {
+  background-color: var(--cor3);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.274);
+  text-shadow:rgba(0, 0, 0, 0.425);
+  color: white;
+  font-family: var(--fonte-padrao);
+  font-weight: normal;
+  text-align: center;
+  font-size: 0.9em;
+  padding: 10px;
+  border-radius: 0px;
+}
+
+footer > div > p {
+  text-shadow:rgba(0, 0, 0, 0.425);
+  color: white;
+  font-family: var(--fonte-destaque);
+  font-weight: normal;
+  text-align: left;
+  font-size: 1.5em;
+  display: block;
+}
