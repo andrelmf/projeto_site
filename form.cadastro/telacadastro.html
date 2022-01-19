@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up form</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="./stylecadastro.css">
     <script src="./script.js"></script>
 </head>
+
 <body>
     <main>
-        <h1>Crie sua conta com:</h1>
+        <h1 class="titulo">Cadastre-se na TecnoInfo com:</h1>
         <div class="social-media">
-         <a href="#" > 
+         <a href="#" >
             <img src="./assets/google.png"  alt="Google">
          </a>
          <a href="#" > 
@@ -26,9 +27,10 @@
             <span>Ou:</span>
         </div>
         <form action="">
-            <label for="name">
-                <span>Nome:</span>
-                <input type="text" id="name" name="name">
+
+            <label for="email">
+                <span>Nome Completo:</span>
+                <input type="email" id="email" name="email">
             </label>
 
             <label for="email">
@@ -37,17 +39,19 @@
             </label>
 
             <label for="password">
-                <span>Password:</span>
+                <span>Senha:</span>
                 <input type="password" id="password" name="password">
             </label>
 
-            <input type="submit" value="Sign up">
-
+                <section id="botoes">
+                    <input type="submit" value="Cadastrar">
+                    <p><span>Já tem uma conta? <a href="./telalogin.html">Login</a></span></span></p>
+                    
+                    
+                    <a href="./telacadastro.html"><button type="submit" value="Cadastre-se"></a>
+                </section id="botoes">
         </form>
     </main>
-    <section class="imagens">
-        <div class="circle"></div>
-    </section>
 
 </body>
 </html>

@@ -15,6 +15,7 @@ body {
   min-height: 100vh;
 }
 
+/*tag Main */
 main {
   display: flex;
   flex-direction: column;
@@ -36,6 +37,7 @@ main .social-media a {
 main .social-media img {
   width: 36px;
   margin-left: 3rem;
+  margin-top: 1rem;
 }
 
 main .social-media a:first-child img {
@@ -81,7 +83,7 @@ main form label {
 
 main form label span {
   font-size: 1.1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 main form input {
@@ -99,8 +101,9 @@ main form input {
 
 main form input[type="submit"] {
   cursor: pointer;
-  width: 50%;
-  margin-top: 4rem;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   border: none;
   border-radius: 32px;
   background: #6c63ff;
@@ -113,23 +116,6 @@ main form input[type="submit"]:hover {
   background: #c5c2c259;
 }
 
-section.images {
-  display: flex;
-  align-items: flex-end;
-  padding: 4rem;
-}
-
-section.images img {
-  width: 90%;
-}
-
-section.images .circle {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: linear-gradient(45deg, #e8cbc0, #636fa4);
-  clip-path: circle(40% at right 100%);
-  z-index: -1;
+@media screen {
+  
 }

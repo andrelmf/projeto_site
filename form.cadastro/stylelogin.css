@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  background-color: #24252A;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  min-height: 100vh;
+}
+
+/*tag Main */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+main.social-media {
+  display: flex;
+  align-content: center;
+}
+
+main .social-media a {
+  text-decoration: none;
+}
+
+main .social-media img {
+  width: 36px;
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
+
+main .social-media a:first-child img {
+  margin-left: 0;
+}
+
+main .alternative {
+  margin-top: 1rem;
+}
+
+main .alternative span {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color:white;
+  position: relative;
+}
+
+main .alternative span::after {
+  left: 50px;
+}
+
+main .alternative span::before,
+main .alternative span::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100px;
+  bottom: 50%;
+  right: 50px;
+  background: rgb(255, 255, 255, 0.3);
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main form label {
+  display: flex;
+  flex-direction: column;
+}
+
+main form label span {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+main form input {
+  background: #fcfdff;
+  width: 300px;
+  height: 50px;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  outline: none;
+  color: black;
+  font-size: 1rem;
+  border: 1px solid #040b18;
+  border-radius: 8px;
+}
+
+main form input[type="submit"] {
+  cursor: pointer;
+  width: 50%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 32px;
+  background: #6c63ff;
+  color: white;
+  font-size: 1.1rem;
+  transition: all 0.1s ease-in-out;
+}
+
+main form input[type="submit"]:hover {
+  background: #c5c2c259;
+}
+
+
+@media screen {
+  
+}
